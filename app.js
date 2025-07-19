@@ -36,8 +36,8 @@ async function fetchingData() {
         div.innerHTML = "";
         for (let i = 0; i < 8; i++) {
             div.innerHTML += `
-            <div class="w-64 h-[350px] animate-pulse bg-gray-300 dark:bg-gray-700 rounded-lg shadow p-4"></div>
-        `;
+                <div class="w-64 h-[350px] animate-pulse bg-gray-300 dark:bg-gray-700 rounded-lg shadow p-4"></div>
+            `;
         }
     };
 
@@ -80,10 +80,17 @@ async function fetchingData() {
 
             const addToCartBtn = card.querySelector("button");
             addToCartBtn.addEventListener("click", () => {
-                cart.push({
-                    title: product.title,
-                    price: product.price,
-                });
+                const existingItem = cart.find(item => item.title === product.title);
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        title: product.title,
+                        price: product.price,
+                        quantity: 1
+                    });
+                }
+
                 total += product.price;
                 updateCart();
             });
@@ -104,8 +111,8 @@ async function fetchingData() {
                 const itemDiv = document.createElement("li");
                 itemDiv.className = "flex justify-between";
                 itemDiv.innerHTML = `
-                    <span>${item.title}</span>
-                    <span>$${item.price.toFixed(2)}</span>
+                    <span>${item.title} <span class="text-sm text-gray-400">(x${item.quantity})</span></span>
+                    <span>$${(item.price * item.quantity).toFixed(2)}</span>
                 `;
                 cartItems.appendChild(itemDiv);
             });
@@ -117,7 +124,7 @@ async function fetchingData() {
     showSkeletons();
     setTimeout(() => {
         renderProducts(products);
-    }, 1500); 
+    }, 1500);
 }
 
 fetchingData();
