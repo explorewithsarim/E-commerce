@@ -1,0 +1,125 @@
+
+
+  * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #141e30, #243b55);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+      color: #fff;
+    }
+
+    .login-container h3 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-size: 15px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .input-field::placeholder {
+      color: #ccc;
+    }
+
+    .input-field:focus {
+      border-color: #ffd700;
+      outline: none;
+      box-shadow: 0 0 5px #ffd700;
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 12px;
+      top: 40%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #ffd700;
+      font-size: 14px;
+    }
+
+    .login-btn, .signup-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-btn {
+      background-color: #ffd700;
+      color: #141e30;
+      margin-top: 10px;
+    }
+
+    .login-btn:hover {
+      background-color: #e6c200;
+    }
+
+    .signup-btn {
+      background-color: transparent;
+      color: #ffd700;
+      border: 1px solid #ffd700;
+      margin-top: 15px;
+    }
+
+    .signup-btn:hover {
+      background-color: #ffd700;
+      color: #141e30;
+    }
+
+    .form-footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 480px) {
+      .login-container {
+        padding: 30px 20px;
+      }
+
+      .login-container h3 {
+        font-size: 24px;
+      }
+    }

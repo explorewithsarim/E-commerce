@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+
+  <form id="signup-form" onsubmit="handleSignup(event)" autocomplete="on">
+    <h3>Sign Up</h3>
+
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" placeholder="Your name" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="you@example.com" required />
+
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="••••••••" required />
+
+    <button type="submit">Create Account</button>
+
+    <div class="signin-link">
+      Already have an account?
+      <a href="index.html">Login</a>
+    </div>
+  </form>
+
+ <script src="auth.js"></script>
+
+</body>
+</html>

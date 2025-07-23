@@ -2,39 +2,40 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 
 </head>
 
 <body>
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
+
+  <form class="login-container" id="login-form" autocomplete="on">
+    <h3>Login to Your Account</h3>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" class="input-field" placeholder="Enter your email" required
+      autocomplete="username">
+
+    <label for="password">Password</label>
+    <div class="password-wrapper">
+      <input type="password" id="password" name="password" class="input-field" placeholder="Enter your password"
+        required autocomplete="current-password">
+      <span class="toggle-password" onclick="togglePassword()">👁️</span>
     </div>
 
-    <form id="login-form" autocomplete="on">
-        <h3>Login Here</h3>
+    <button type="submit" class="login-btn">Login</button>
 
-        <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username" name="username" autocomplete="username">
+    <button type="button" class="signup-btn" onclick="window.location.href='signup.html'">Sign Up</button>
 
-        <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password" name="password" autocomplete="current-password">
-
-        <button type="submit" onclick="log(event)">Log In</button>
-
-        <div class="social">
-            <div class="go"><i class="fab fa-google"></i> Google</div>
-            <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
-        </div>
-    </form>
-
-    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
-    <script src="app.js"></script>
+    <div class="form-footer">
+      Don't have an account? Click Sign Up
+    </div>
+  </form>
+  <script src="auth.js"></script>
 </body>
 
 </html>
