@@ -66,18 +66,3 @@
   color: #4b5563;
   line-height: 1.6;
 }
-
-
-.logout{
-
-  background-color: rgb(20, 21, 21);
-  border-radius: 20px;
-  color: white;
-
-}.btn{
-  border: 1px solid red;
-  height: 40px;
-  background-color: green;
-  cursor: pointer;
-
-}
